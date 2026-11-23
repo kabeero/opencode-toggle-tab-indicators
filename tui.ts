@@ -15,7 +15,7 @@ export default Plugin.define({
           id: "local.tabs.indicators.toggle",
           title: "Toggle tab indicators (status/numbers)",
           group: "Tabs",
-          bind: "<leader>shift+3,<leader>#",
+          bind: "<leader>#",
           palette: true,
           async run() {
             try {

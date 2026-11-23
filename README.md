@@ -26,13 +26,12 @@ To update, `git pull` inside that folder and `/reload`. To remove, delete the fo
 
 | Trigger | Action |
 | --- | --- |
-| Your leader key, then `Shift+3` (`<leader>shift+3`) | Toggle tab indicators |
-| Your leader key, then `#` (`<leader>#`) | Same, alternate spelling |
+| Your leader key, then `#` (`<leader>#`) | Toggle tab indicators |
 | `Ctrl+P`, then "Toggle tab indicators (status/numbers)" | Same, from the command palette |
 
 ## Configure
 
-The command ID is `local.tabs.indicators.toggle` and the default bind is `<leader>shift+3,<leader>#`. OpenCode keybinds spell Shift out (`shift+3`) rather than using the shifted character. Both spellings are bound because terminals differ in how they report `#`.
+The command ID is `local.tabs.indicators.toggle` and the default bind is `<leader>#`.
 
 To change the key, edit the `bind` string in `tui.ts`.
 
@@ -42,7 +41,6 @@ The plugin reads and writes `~/.config/opencode/cli.json`, or `$XDG_CONFIG_HOME/
 
 - The plugin rewrites `cli.json` with two-space indentation. Comments in the file are lost, because the file is parsed as plain JSON. If you keep comments in `cli.json`, this plugin will break the file or strip them.
 - If the file is missing, unreadable or invalid JSON, you get an error toast and nothing is written.
-- If `<leader>3` is bound to switch to tab 3 (the default for `session.tab.select.3`), `<leader>shift+3` may overlap with it on some terminals. Test the key before relying on it.
 
 ## Requirements
 
